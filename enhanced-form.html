@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Form Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    table {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Enhanced HTML5 Page</h1>
+    <p>This page demonstrates lists, tables, media, and a fully accessible form with HTML5 validation.</p>
+  </header>
+
+  <section>
+    <h2>My Favorite Hobbies</h2>
+    <ul>
+      <li>Photography</li>
+      <li>Traveling</li>
+      <li>Reading science fiction</li>
+      <li>Playing the guitar</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Weekly Workout Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Workout</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Cardio & HIIT</td>
+          <td>45 mins</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Strength Training</td>
+          <td>60 mins</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Yoga & Stretching</td>
+          <td>30 mins</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Watch My Travel Video</h2>
+    <video width="100%" controls>
+      <source src="sample-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form action="/submit" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="2">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Feedback</legend>
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+          <option value="">--Please choose an option--</option>
+          <option value="website">Website Feedback</option>
+          <option value="content">Content Suggestion</option>
+          <option value="bug">Report a Bug</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <label for="newsletter">
+          <input type="checkbox" id="newsletter" name="newsletter" checked readonly>
+          Subscribe to newsletter (default)
+        </label>
+
+      </fieldset>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My HTML5 Project</p>
+  </footer>
+</body>
+</html>
